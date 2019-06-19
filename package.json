@@ -1,0 +1,9 @@
+{
+  "name": "SummitStudio",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "latest",
+    "morgan": "^1.9.1"
+  }
+}
