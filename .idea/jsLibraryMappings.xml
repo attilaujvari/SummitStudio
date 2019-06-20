@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{SummitStudio/node_modules}" />
-    <file url="file://$PROJECT_DIR$/client" libraries="{SummitStudio/client/node_modules}" />
-    <file url="PROJECT" libraries="{@types/express, @types/mongodb, @types/mongoose, @types/morgan, @types/react, @types/react-bootstrap, @types/react-router-dom, SummitStudio/client/node_modules, SummitStudio/node_modules}" />
+    <file url="PROJECT" libraries="{@types/express, @types/mongodb, @types/mongoose, @types/morgan, @types/react, @types/react-dom, @types/react-router-dom}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

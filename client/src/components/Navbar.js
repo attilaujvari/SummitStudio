@@ -1,23 +1,83 @@
-import React from 'react'
-import Nav from "react-bootstrap/Nav";
-import { Link, animateScroll as scroll } from "react-scroll"
+import React, {useState, useEffect} from "react";
+import logo from "../graphics/3D-Complete.png";
+import { Link, animateScroll as scroll } from "react-scroll";
 
-export default function Navbar() {
-    return(
-        <div>
-            <Nav justify variant="tabs" defaultActiveKey="/home">
-                <Nav.Item>
-                    <Nav.Link href="/home">Home</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-2">Link</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/contact">
-                        Contact Us
-                    </Nav.Link>
-                </Nav.Item>
-            </Nav>
-        </div>
-    )
+const Navbar = () => {
+
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
+
+        return (
+            <nav className="nav" id="navbar">
+                <div className="nav-content">
+                    <img
+                        src={logo}
+                        className="nav-logo"
+                        alt="Logo"
+                        onClick={scrollToTop}
+                    />
+                    <ul className="nav-items">
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                onClick={scrollToTop}
+                            >
+                                Home
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Who we are
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="services"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Services
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="portfolio"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Portfolio
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Contact
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        );
 }
+
+export default Navbar
